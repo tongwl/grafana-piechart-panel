@@ -88,7 +88,7 @@ System.register(["angular", "app/core/utils/kbn", "jquery", "jquery.flot", "jque
                 name = panel.legend.header;
               }
 
-              var html = '<th class="pointer" data-stat="' + _.escape(statName) + '">' + (name=== 'current' ? '实时' : name);
+              var html = '<th class="pointer" data-stat="' + _.escape(statName) + '">' + (name=== 'current' ? '容量' : name);
 
               if (panel.legend.sort === statName) {
                 var cssClass = panel.legend.sortDesc ? "fa fa-caret-down" : "fa fa-caret-up";
@@ -252,7 +252,7 @@ System.register(["angular", "app/core/utils/kbn", "jquery", "jquery.flot", "jque
                 html += '<span class="piechart-legend-icon" style="float:none;">';
                 html += '<i class="fa fa-minus pointer" style="color:#8c55d6;"></i>';
                 html += "</span>";
-                html += '<a class="piechart-legend-alias" style="float:none;">total</a>';
+                html += '<a class="piechart-legend-alias" style="float:none;">总计</a>';
                 html += '<div class="piechart-legend-value">' + ctrl.formatValue(totalValue) + "</div>";
                 html += '<div class="piechart-legend-value">' + totalPercent + "%</div>";
                 seriesElements.push($(html));
